@@ -1,6 +1,10 @@
 const { Router } = require('express');
+const route = Router();
 
-const routes = Router();
+const loginController = require('../controllers/LoginController');
 
-module.exports = routes;
+//Rotas de login
+route.get('/login/index', loginController.index);
+
+module.exports = route;
 
